@@ -9,7 +9,12 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-env', // 转换ES6语法
+              [
+                '@babel/preset-env',
+                {
+                  useBuiltIns: 'usage'
+                }
+              ], // 转换ES6语法
               '@babel/preset-react' // 转换JSX语法
             ]
           }

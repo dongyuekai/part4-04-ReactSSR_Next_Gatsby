@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Link href='/list'><a>jump to list</a></Link>
+      <img src='vercel.svg' />
     </div>
   )
 }

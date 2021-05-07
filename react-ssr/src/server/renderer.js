@@ -5,9 +5,12 @@ import routes from "../share/routes";
 import { renderRoutes } from "react-router-config";
 
 export default req => {
+
+  // 服务端路由
   const content = renderToString(
     <StaticRouter location={req.path}>{renderRoutes(routes)}</StaticRouter>
   )
+  
   return `
     <html>
       <head>

@@ -7,6 +7,5 @@ export default [{
   exact: true
 }, {
   path: '/list',
-  component: List,
-  exact: true
+  ...List
 }]

@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import styles from '../styles/list.module.css'
+
 
 export default () => {
   return (
@@ -6,7 +8,7 @@ export default () => {
       <Head>
         <title>list page</title>
       </Head>
-      <div>list</div>
+      <div className={styles.demo}>list</div>
     </>
   )
 }

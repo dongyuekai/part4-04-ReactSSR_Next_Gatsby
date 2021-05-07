@@ -1,5 +1,12 @@
+import Head from 'next/head'
+
 export default () => {
   return (
-    <div>list</div>
+    <>
+      <Head>
+        <title>list page</title>
+      </Head>
+      <div>list</div>
+    </>
   )
 }

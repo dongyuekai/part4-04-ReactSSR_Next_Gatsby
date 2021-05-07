@@ -5,9 +5,12 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        <title>index page</title>
+      </Head>
       <Link href='/list'><a>jump to list</a></Link>
       <img src='vercel.svg' />
-    </div>
+    </>
   )
 }

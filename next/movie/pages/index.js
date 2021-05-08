@@ -1,10 +1,14 @@
-import Header from '../components/Header'
-import Navigation from '../components/Navigation'
+import Layout from '../components/Layout'
+import Swiper from '../components/Swiper'
+import Movie from '../components/Movie'
+
 export default function Home() {
   return (
     <div>
-      <Header />
-      <Navigation />
+      <Layout>
+        <Swiper />
+        <Movie />
+      </Layout>
     </div>
   )
 }

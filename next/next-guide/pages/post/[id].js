@@ -1,6 +1,9 @@
+import { useRouter } from 'next/router'
 // 这里的参数data是getStaticProps函数返回的
 export default function Post({ data }) {
   console.log(data)
+  const router = useRouter()
+  if (router.isFallback) return <div>等待中...</div>
   return (
     <div>
       <span>{data.id}</span>
@@ -15,7 +18,7 @@ export async function getStaticPaths() {
       { params: { id: '1' } },
       { params: { id: '2' } }
     ],
-    fallback: false
+    fallback: true // false 表示未匹配到的页面显示404 eg: post/3   true表示展示等待页面 然后向下查找 比如post/3 不在paths范围 则向下在getStaticProps方法中匹配
   }
 }
 // 返回路由参数所对应的具体的数据

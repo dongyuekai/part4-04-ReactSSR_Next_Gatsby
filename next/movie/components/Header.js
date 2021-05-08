@@ -49,7 +49,7 @@ const SignInAndJoin = styled.div`
 export default function Header() {
   return (
     <Box h={52} bgColor="#202020" borderBottom="1px solid #393939">
-      <Container h={52} maxW={1200} margin='0 auto'>
+      <Container h={52} maxW={1200} margin='0 auto' position='relative'>
         <SignInAndJoin>
           <Button leftIcon={<FaSignInAlt />}>登录</Button>
           <Button leftIcon={<BsFillPersonFill />}>注册</Button>

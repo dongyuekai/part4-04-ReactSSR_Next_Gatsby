@@ -5,6 +5,9 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Box, Button, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link';
+import axios from 'axios'
+import { baseURL } from '../axiosConfig'
+
 
 const swiperContainer = css`
   position: relative;
@@ -41,7 +44,7 @@ const CarouselItem = styled.div`
   }
 `
 
-export default function Swiper() {
+export default function Swiper({ data }) {
   return (
     <>
       <Head>
@@ -54,16 +57,16 @@ export default function Swiper() {
         showStatus={false}
       >
         {
-          [1, 3, 4].map(item => (
-            <CarouselItem>
-              <img src='/images/1.jpg' />
+          data.map(item => (
+            <CarouselItem key={item.id}>
+              <img src={item.url} />
               <Box>
                 <Heading as='h2' size='lg'>
-                  我是头标题-我是头标题-我是头标题
-            </Heading>
+                  {item.title}
+                </Heading>
                 <Text>
-                  描述文件-描述文件-描述文件
-            </Text>
+                  {item.description}
+                </Text>
                 <Button colorScheme='red'>
                   <Link href='#'><a>CHECK DETAIL</a></Link>
                 </Button>
@@ -74,4 +77,8 @@ export default function Swiper() {
       </Carousel>
     </>
   )
+}
+
+export function loadSwiper() {
+  return axios.get('/api/swiper', { baseURL })
 }

@@ -71,14 +71,14 @@ const Menu = {
      *   }
      * }
      */
-    ...copy(Button.variants, 'MenuButton'),
+    // ...copy(Button.variants, 'MenuButton'),
   },
   sizes: {
     /**
      * We're using `copy` function to copy all button sizes
      * under the key `MenuButton`.
      */
-    ...copy(Button.sizes, 'MenuButton'),
+    // ...copy(Button.sizes, 'MenuButton'),
   },
 };
 

@@ -35,11 +35,11 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-strapi',
+      resolve: "gatsby-source-strapi",
       options: {
-        apiURL: 'localhost:1337',
-        contentTypes: ['Post']
-      }
-    }
+        apiUrl: "http://localhost:1337",
+        contentTypes: ["Post",],
+      },
+    },
   ],
 }

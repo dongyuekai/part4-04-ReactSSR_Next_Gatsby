@@ -18,8 +18,8 @@ module.exports = {
         path: `${__dirname}/json/`
       }
     },
-    {
-      resolve: 'gatsby-transformer-json'
-    }
+    'gatsby-transformer-json',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp'
   ],
 }

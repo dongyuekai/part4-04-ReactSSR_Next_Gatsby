@@ -68,7 +68,7 @@ export default function Swiper({ data }) {
                   {item.description}
                 </Text>
                 <Button colorScheme='red'>
-                  <Link href='#'><a>CHECK DETAIL</a></Link>
+                  <Link href="/detail/[id]" as={`/detail/${item.vid}`}><a>CHECK DETAIL</a></Link>
                 </Button>
               </Box>
             </CarouselItem>

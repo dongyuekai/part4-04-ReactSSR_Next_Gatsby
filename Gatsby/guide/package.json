@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^3.4.2",
     "gatsby-remark-images": "^5.1.0",
     "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-json": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",
     "gatsby-transformer-sharp": "^3.4.0",

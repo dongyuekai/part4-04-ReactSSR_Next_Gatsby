@@ -18,6 +18,14 @@ module.exports = {
         path: `${__dirname}/json/`
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'markdown',
+        path: `${__dirname}/src/posts/`
+      }
+    },
+    'gatsby-transformer-remark',
     'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp'

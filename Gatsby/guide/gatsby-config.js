@@ -58,6 +58,14 @@ module.exports = {
         apiUrl: 'http://localhost:1337',
         contentTypes: ['Post', 'Product']
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        cssLoaderOptions: {
+          camelCase: false
+        }
+      }
+    },
   ],
 }

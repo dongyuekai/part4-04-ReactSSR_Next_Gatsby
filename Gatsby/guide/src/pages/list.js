@@ -1,14 +1,14 @@
 import React from "react"
 import Header from '../components/Header'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
 export default function List({ data }) {
   console.log(data)
   return (
     <div>
       List page!
-      <SEO title='list page' description='list page description' />
+      <Seo title='list page' description='list page description' />
       <Header />
       <hr />
       {

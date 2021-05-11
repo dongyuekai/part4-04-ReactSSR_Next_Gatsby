@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
+  const dispatch = useDispatch()
+  const authReducer = useSelector(state => state.authReducer)
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    if (token) {
+      dispatch({
+        type: "loadUser",
+        payload: token,
+      })
+    }
+  }, [])
   return (
     <nav className='navbar navbar-light'>
       <div className='container'>
@@ -11,7 +23,11 @@ export default function Header() {
           <li className='nav-item'>
             <a className='nav-link active'>Home</a>
           </li>
-          
+          {authReducer.success ? (
+            <Login username={authReducer.user.username} />
+          ) : (
+            <Logout />
+          )}
         </ul>
       </div>
     </nav>

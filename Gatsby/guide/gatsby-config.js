@@ -26,6 +26,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'markdown',
+        path: `${__dirname}/xml/`
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: ['gatsby-remark-images']
@@ -34,6 +41,8 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-xml',
+
     // {
     //   resolve: "gatsby-source-strapi",
     //   options: {

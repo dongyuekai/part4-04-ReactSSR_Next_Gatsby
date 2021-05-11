@@ -9,11 +9,11 @@ async function sourceNodes({ actions }, configOptions) {
   const types = contentTypes
     .map(type => type.toLowerCase())
     .map(type => pluralize(type))
-  console.log('dyk---types--', types) // [ 'posts', 'products' ]
+  // console.log('dyk---types--', types) // [ 'posts', 'products' ]
 
   // 从外部数据源（cms）中获取数据
   let final = await getContents(types, apiUrl)
-  console.log('dyk-final--', final)
+  // console.log('dyk-final--', final)
 
   for (let [key, value] of Object.entries(final)) {
     // 1 构建数据节点对象 allPostsContent allProductsContent

@@ -42,7 +42,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-xml',
-
+    'gatsby-plugin-react-helmet',
     // {
     //   resolve: "gatsby-source-strapi",
     //   options: {

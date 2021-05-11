@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "IId": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "string"
+    },
+    "CreatedAt": {
+      "type": "datetime"
+    }
+  }
+}

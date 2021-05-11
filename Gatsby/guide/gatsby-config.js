@@ -34,12 +34,21 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    // {
+    //   resolve: "gatsby-source-strapi",
+    //   options: {
+    //     apiUrl: "http://localhost:1337",
+    //     contentTypes: ["Post",],
+    //   },
+    // },
+
+    // 自定义的数据源插件获取外部数据
     {
-      resolve: "gatsby-source-strapi",
+      resolve: 'gatsby-source-mystrapi',
       options: {
-        apiUrl: "http://localhost:1337",
-        contentTypes: ["Post",],
-      },
-    },
+        apiUrl: 'http://localhost:1337',
+        contentTypes: ['Post', 'Product']
+      }
+    }
   ],
 }

@@ -6,5 +6,11 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      // 客户端路由
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/app/*'] }
+    }
+  ],
 }

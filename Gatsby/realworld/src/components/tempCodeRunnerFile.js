@@ -1,0 +1,2 @@
+  navigate("/login")
+  return null

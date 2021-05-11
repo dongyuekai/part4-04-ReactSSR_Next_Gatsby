@@ -43,6 +43,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-transformer-xml',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-less',
     // {
     //   resolve: "gatsby-source-strapi",
     //   options: {
@@ -59,13 +60,6 @@ module.exports = {
         contentTypes: ['Post', 'Product']
       }
     },
-    {
-      resolve: 'gatsby-plugin-less',
-      options: {
-        cssLoaderOptions: {
-          camelCase: false
-        }
-      }
-    },
+
   ],
 }

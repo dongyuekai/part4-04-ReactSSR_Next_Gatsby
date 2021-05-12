@@ -16,5 +16,7 @@ module.exports = {
       resolve: "gatsby-source-list",
       options: { apiUrl: "https://conduit.productionready.io/api" },
     },
+    'gatsby-plugin-article', //文章详情页
+    'gatsby-disable-404' //禁止掉默认的404 
   ],
 }

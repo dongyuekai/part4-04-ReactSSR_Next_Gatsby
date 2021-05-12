@@ -36,7 +36,7 @@ async function loadArticles(apiUrl) {
   }
   return result
 }
-// 分页查询
+// 分页查询 构建list/xx 页面
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   let { data } = await graphql(`

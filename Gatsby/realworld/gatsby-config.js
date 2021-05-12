@@ -11,6 +11,10 @@ module.exports = {
       // 客户端路由
       resolve: 'gatsby-plugin-create-client-paths',
       options: { prefixes: ['/app/*'] }
-    }
+    },
+    {
+      resolve: "gatsby-source-list",
+      options: { apiUrl: "https://conduit.productionready.io/api" },
+    },
   ],
 }
